@@ -1,15 +1,15 @@
 import { motion } from "framer-motion";
 import { FadeInUp } from "./Animations";
-import galleryHeroes from "@/assets/gallery-heroes.jpg";
-import galleryAnimalsNew from "@/assets/gallery-animals-new.jpg";
-import galleryCharacters from "@/assets/gallery-characters.jpg";
-import galleryVehicles from "@/assets/gallery-vehicles.jpg";
-import galleryMasks from "@/assets/gallery-masks.jpg";
+import galleryHeroes from "@/assets/gallery-heroes-new.webp";
+import galleryAnimals from "@/assets/gallery-animals-new-v2.jpg";
+import galleryCharacters from "@/assets/gallery-characters-new.jpg";
+import galleryVehicles from "@/assets/gallery-vehicles-new.jpg";
+import galleryMasks from "@/assets/gallery-masks-new.jpg";
 import galleryDiverse from "@/assets/gallery-diverse-new.jpg";
 
 const categories = [
   { src: galleryHeroes, label: "Heróis" },
-  { src: galleryAnimalsNew, label: "Animais" },
+  { src: galleryAnimals, label: "Animais" },
   { src: galleryCharacters, label: "Personagens" },
   { src: galleryVehicles, label: "Veículos" },
   { src: galleryMasks, label: "Máscaras" },
