@@ -6,6 +6,7 @@ import testimonialProduct2 from "@/assets/testimonial-product-2.jpg";
 import testimonialProduct3 from "@/assets/testimonial-product-3.jpg";
 import testimonialAvatar1 from "@/assets/testimonial-avatar-1.jpeg";
 import testimonialAvatar2 from "@/assets/testimonial-avatar-2.jpeg";
+import testimonialAvatar3 from "@/assets/testimonial-avatar-3.jpeg";
 
 const testimonials = [
   {
@@ -27,7 +28,7 @@ const testimonials = [
     role: "MÃE DO ARTHUR",
     text: "Disfrutei cada parte da montagem. É intuitivo, bem pensado e muito satisfatório ver como vai tomando forma. Ideal para fazer sozinho ou em família.",
     image: testimonialProduct3,
-    initials: "CS",
+    avatar: testimonialAvatar3,
   },
 ];
 
@@ -65,11 +66,7 @@ const TestimonialsSection = () => (
               {/* Avatar overlapping top */}
               <div className="absolute -top-0 left-8 z-10">
                 <div className="w-14 h-14 rounded-full bg-muted flex items-center justify-center font-bold text-primary text-lg border-4 border-card shadow-lg overflow-hidden">
-                  {"avatar" in t ? (
-                    <img src={t.avatar} alt={t.name} className="w-full h-full object-cover" />
-                  ) : (
-                    t.initials
-                  )}
+                  <img src={t.avatar} alt={t.name} className="w-full h-full object-cover" />
                 </div>
               </div>
 
