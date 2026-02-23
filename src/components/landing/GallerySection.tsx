@@ -5,7 +5,7 @@ import galleryAnimalsNew from "@/assets/gallery-animals-new.jpg";
 import galleryCharacters from "@/assets/gallery-characters.jpg";
 import galleryVehicles from "@/assets/gallery-vehicles.jpg";
 import galleryMasks from "@/assets/gallery-masks.jpg";
-import galleryDiverse from "@/assets/gallery-diverse.jpg";
+import galleryDiverse from "@/assets/gallery-diverse-new.jpg";
 
 const categories = [
   { src: galleryHeroes, label: "Heróis" },
