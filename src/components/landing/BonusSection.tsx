@@ -13,16 +13,16 @@ const bonuses = [
     image: bonusHeroes,
   },
   {
-    title: "Alfabeto e Números 3D Educativos",
+    title: "Casinhas e Cenários Gigantes",
     description: "Castelos, cidades e cenários medievais em papel para criar mundos inteiros de brincadeira.",
     from: "R$ 37,00",
-    image: bonusAlphabet,
+    image: bonusHouses,
   },
   {
-    title: "Casinhas e Cenários Gigantes",
-    description: "Foguetes, aviões e veículos incríveis que as crianças vão adorar montar e brincar.",
+    title: "Alfabeto e Números 3D Educativos",
+    description: "Letras e números em formato 3D para as crianças aprenderem brincando enquanto montam suas próprias criações educativas.",
     from: "R$ 27,00",
-    image: bonusHouses,
+    image: bonusAlphabet,
   },
 ];
 
