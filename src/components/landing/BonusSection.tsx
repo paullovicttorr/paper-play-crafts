@@ -14,7 +14,7 @@ const bonuses = [
   },
   {
     title: "Casinhas e Cenários Gigantes",
-    description: "Castelos, cidades e cenários medievais em papel para criar mundos inteiros de brincadeira.",
+    description: "Letras e números em formato 3D para as crianças aprenderem brincando enquanto montam suas próprias criações educativas.",
     from: "R$ 37,00",
     image: bonusHouses,
   },
