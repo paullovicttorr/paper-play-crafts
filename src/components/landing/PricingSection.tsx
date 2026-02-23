@@ -15,8 +15,99 @@ const PricingSection = () => (
       </FadeInUp>
 
       <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 items-start">
-        {/* Plano Básico */}
+        {/* Plano Completo (Premium) - PRIMEIRO */}
         <FadeInUp delay={0.1}>
+          <div className="relative">
+            <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-10">
+              <span className="bg-accent text-accent-foreground text-xs font-bold uppercase px-4 py-1.5 rounded-full flex items-center gap-1 shadow-md whitespace-nowrap">
+                <Star className="w-3 h-3 fill-current" /> Mais Vendido <Star className="w-3 h-3 fill-current" />
+              </span>
+            </div>
+
+            <motion.div
+              whileHover={{ scale: 1.02, y: -6 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              className="bg-gradient-to-b from-primary/5 to-card rounded-3xl border-2 border-primary shadow-card-hover overflow-hidden"
+            >
+              <div className="bg-primary text-primary-foreground p-6 text-center">
+                <p className="text-sm font-bold uppercase tracking-wider opacity-90">Acesso Completo</p>
+                <h3 className="text-xl font-bold mt-1">Mundo 3D em Papel PRO</h3>
+              </div>
+
+              <div className="p-8 text-center space-y-6">
+                <div>
+                  <div className="flex items-center justify-center gap-2">
+                    <p className="text-muted-foreground line-through text-lg">R$ 97,00</p>
+                    <span className="bg-secondary/15 text-secondary text-xs font-bold px-2 py-0.5 rounded">ECONOMIZE 72%</span>
+                  </div>
+                  <p className="text-5xl font-bold text-foreground mt-1">
+                    R$ <span className="text-gradient-orange">27</span>
+                    <span className="text-lg text-muted-foreground font-normal">,90</span>
+                  </p>
+                  <p className="text-sm text-muted-foreground mt-1">Pagamento único</p>
+                </div>
+
+                <ul className="text-left space-y-3 text-sm">
+                  {[
+                    { icon: "📦", text: "Coleção TOTAL (+1.200 Moldes Premium)" },
+                    { icon: "🐾", text: "Animais" },
+                    { icon: "🦸", text: "Heróis" },
+                    { icon: "👸", text: "Princesas e Personagens" },
+                    { icon: "🏠", text: "Casinhas e Cenários" },
+                    { icon: "🚗", text: "Veículos" },
+                    { icon: "🔤", text: "Alfabeto e Números 3D" },
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-center gap-2 text-foreground">
+                      <Check className="w-4 h-4 text-secondary flex-shrink-0" />
+                      <span>{item.icon} {item.text}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <p className="text-secondary font-bold text-sm flex items-center justify-center gap-1">
+                  🎉 Acesso VITALÍCIO (Nunca expira!)
+                </p>
+
+                <div className="border-2 border-dashed border-accent rounded-xl p-4 flex items-center gap-3 text-left bg-accent/5">
+                  <div className="bg-accent/20 rounded-full p-2 flex-shrink-0">
+                    <Gift className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <p className="font-bold text-sm text-foreground">LEVE 3 BÔNUS EXTRAS!</p>
+                    <p className="text-xs text-muted-foreground">
+                      <span className="line-through">Valor: R$ 111,00</span>{" "}
+                      <span className="bg-secondary/15 text-secondary font-bold px-1.5 py-0.5 rounded text-xs">HOJE: R$ 0</span>
+                    </p>
+                  </div>
+                </div>
+
+                <motion.a
+                  href="#"
+                  whileHover={{ scale: 1.04 }}
+                  whileTap={{ scale: 0.97 }}
+                  className="block w-full bg-secondary text-secondary-foreground font-bold text-lg py-4 rounded-2xl pulse-glow-green text-center cursor-pointer"
+                >
+                  <span className="flex flex-col items-center">
+                    <span className="flex items-center gap-2">
+                      Garantir Meu Acesso Agora
+                      <ArrowRight className="w-5 h-5" />
+                    </span>
+                    <span className="text-xs font-normal opacity-80">Compra Segura & Acesso Imediato</span>
+                  </span>
+                </motion.a>
+
+                <div className="flex items-center justify-center gap-6 text-xs text-muted-foreground pt-2">
+                  <span className="flex items-center gap-1"><Lock className="w-3 h-3" /> Pagamento Seguro</span>
+                  <span className="flex items-center gap-1"><Mail className="w-3 h-3" /> Acesso Imediato</span>
+                  <span className="flex items-center gap-1"><Shield className="w-3 h-3" /> Garantia 30 dias</span>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </FadeInUp>
+
+        {/* Plano Básico - SEGUNDO */}
+        <FadeInUp delay={0.25}>
           <motion.div
             whileHover={{ scale: 1.02, y: -4 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
@@ -63,101 +154,6 @@ const PricingSection = () => (
               Escolher Básico
             </motion.a>
           </motion.div>
-        </FadeInUp>
-
-        {/* Plano Completo (Premium) */}
-        <FadeInUp delay={0.25}>
-          <div className="relative">
-            {/* Badge Mais Vendido */}
-            <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-10">
-              <span className="bg-accent text-accent-foreground text-xs font-bold uppercase px-4 py-1.5 rounded-full flex items-center gap-1 shadow-md whitespace-nowrap">
-                <Star className="w-3 h-3 fill-current" /> Mais Vendido <Star className="w-3 h-3 fill-current" />
-              </span>
-            </div>
-
-            <motion.div
-              whileHover={{ scale: 1.02, y: -6 }}
-              transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              className="bg-gradient-to-b from-primary/5 to-card rounded-3xl border-2 border-primary shadow-card-hover overflow-hidden"
-            >
-              {/* Header */}
-              <div className="bg-primary text-primary-foreground p-6 text-center">
-                <p className="text-sm font-bold uppercase tracking-wider opacity-90">Acesso Completo</p>
-                <h3 className="text-xl font-bold mt-1">Mundo 3D em Papel PRO</h3>
-              </div>
-
-              {/* Body */}
-              <div className="p-8 text-center space-y-6">
-                <div>
-                  <div className="flex items-center justify-center gap-2">
-                    <p className="text-muted-foreground line-through text-lg">R$ 97,00</p>
-                    <span className="bg-secondary/15 text-secondary text-xs font-bold px-2 py-0.5 rounded">ECONOMIZE 72%</span>
-                  </div>
-                  <p className="text-5xl font-bold text-foreground mt-1">
-                    R$ <span className="text-gradient-orange">27</span>
-                    <span className="text-lg text-muted-foreground font-normal">,00</span>
-                  </p>
-                  <p className="text-sm text-muted-foreground mt-1">Pagamento único</p>
-                </div>
-
-                <ul className="text-left space-y-3 text-sm">
-                  {[
-                    { icon: "📦", text: "Coleção TOTAL (+1.200 Moldes Premium)" },
-                    { icon: "🐾", text: "Animais" },
-                    { icon: "🦸", text: "Heróis" },
-                    { icon: "👸", text: "Princesas e Personagens" },
-                    { icon: "🏠", text: "Casinhas e Cenários" },
-                    { icon: "🚗", text: "Veículos" },
-                    { icon: "🔤", text: "Alfabeto e Números 3D" },
-                  ].map((item, i) => (
-                    <li key={i} className="flex items-center gap-2 text-foreground">
-                      <Check className="w-4 h-4 text-secondary flex-shrink-0" />
-                      <span>{item.icon} {item.text}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <p className="text-secondary font-bold text-sm flex items-center justify-center gap-1">
-                  🎉 Acesso VITALÍCIO (Nunca expira!)
-                </p>
-
-                {/* Bonus callout */}
-                <div className="border-2 border-dashed border-accent rounded-xl p-4 flex items-center gap-3 text-left bg-accent/5">
-                  <div className="bg-accent/20 rounded-full p-2 flex-shrink-0">
-                    <Gift className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-bold text-sm text-foreground">LEVE 3 BÔNUS EXTRAS!</p>
-                    <p className="text-xs text-muted-foreground">
-                      <span className="line-through">Valor: R$ 111,00</span>{" "}
-                      <span className="bg-secondary/15 text-secondary font-bold px-1.5 py-0.5 rounded text-xs">HOJE: R$ 0</span>
-                    </p>
-                  </div>
-                </div>
-
-                <motion.a
-                  href="#"
-                  whileHover={{ scale: 1.04 }}
-                  whileTap={{ scale: 0.97 }}
-                  className="block w-full bg-secondary text-secondary-foreground font-bold text-lg py-4 rounded-2xl pulse-glow-green text-center cursor-pointer"
-                >
-                  <span className="flex flex-col items-center">
-                    <span className="flex items-center gap-2">
-                      Garantir Meu Acesso Agora
-                      <ArrowRight className="w-5 h-5" />
-                    </span>
-                    <span className="text-xs font-normal opacity-80">Compra Segura & Acesso Imediato</span>
-                  </span>
-                </motion.a>
-
-                <div className="flex items-center justify-center gap-6 text-xs text-muted-foreground pt-2">
-                  <span className="flex items-center gap-1"><Lock className="w-3 h-3" /> Pagamento Seguro</span>
-                  <span className="flex items-center gap-1"><Mail className="w-3 h-3" /> Acesso Imediato</span>
-                  <span className="flex items-center gap-1"><Shield className="w-3 h-3" /> Garantia 14 dias</span>
-                </div>
-              </div>
-            </motion.div>
-          </div>
         </FadeInUp>
       </div>
     </div>
