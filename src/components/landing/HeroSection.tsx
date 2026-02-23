@@ -2,6 +2,12 @@ import { motion } from "framer-motion";
 import { FadeInUp } from "./Animations";
 import { ArrowRight } from "lucide-react";
 import heroImg from "@/assets/hero-paper-toys.jpg";
+import avatarFace1 from "@/assets/avatar-face-1.jpeg";
+import avatarFace2 from "@/assets/avatar-face-2.jpeg";
+import avatarFace3 from "@/assets/avatar-face-3.jpeg";
+import avatarFace4 from "@/assets/avatar-face-4.jpeg";
+
+const avatarFaces = [avatarFace1, avatarFace2, avatarFace3, avatarFace4];
 
 const HeroSection = () => {
   return (
@@ -37,9 +43,9 @@ const HeroSection = () => {
               </motion.a>
               <div className="flex items-center gap-6 pt-2">
                 <div className="flex -space-x-2">
-                  {[1, 2, 3, 4].map(i => (
-                    <div key={i} className="w-9 h-9 rounded-full bg-muted border-2 border-card flex items-center justify-center text-xs font-bold text-muted-foreground">
-                      {["👩", "👨", "👩‍🦰", "👴"][i - 1]}
+                  {avatarFaces.map((src, i) => (
+                    <div key={i} className="w-9 h-9 rounded-full border-2 border-card overflow-hidden">
+                      <img src={src} alt="Cliente" className="w-full h-full object-cover" />
                     </div>
                   ))}
                 </div>
