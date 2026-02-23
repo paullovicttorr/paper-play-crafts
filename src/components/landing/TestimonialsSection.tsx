@@ -5,6 +5,7 @@ import testimonialProduct1 from "@/assets/testimonial-product-1.jpg";
 import testimonialProduct2 from "@/assets/testimonial-product-2.jpg";
 import testimonialProduct3 from "@/assets/testimonial-product-3.jpg";
 import testimonialAvatar1 from "@/assets/testimonial-avatar-1.jpeg";
+import testimonialAvatar2 from "@/assets/testimonial-avatar-2.jpeg";
 
 const testimonials = [
   {
@@ -19,7 +20,7 @@ const testimonials = [
     role: "PROFESSORA",
     text: "As instruções são super claras e fáceis de seguir. Não precisa de experiência prévia, tudo está bem explicado passo a passo. Foi uma experiência muito divertida e relaxante.",
     image: testimonialProduct2,
-    initials: "AR",
+    avatar: testimonialAvatar2,
   },
   {
     name: "Carmen Sánchez",
