@@ -57,8 +57,8 @@ const HeroSection = () => {
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
               className="relative"
             >
-              <div className="rounded-3xl overflow-hidden shadow-card-hover border-4 border-card">
-                <img src={heroImg} alt="Brinquedos de papel 3D coloridos" className="w-full h-auto" />
+              <div className="rounded-3xl overflow-hidden shadow-card-hover border-4 border-card aspect-square">
+                <img src={heroImg} alt="Brinquedos de papel 3D coloridos" className="w-full h-full object-cover" />
               </div>
               {/* Floating badge */}
               <motion.div
