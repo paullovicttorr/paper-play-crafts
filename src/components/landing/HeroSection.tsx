@@ -14,15 +14,15 @@ const HeroSection = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Copy */}
           <FadeInUp>
-            <div className="space-y-6">
-              <span className="inline-block bg-accent/30 text-accent-foreground font-bold text-sm px-4 py-1.5 rounded-full">
+            <div className="space-y-3 md:space-y-4 text-center md:text-left flex flex-col items-center md:items-start">
+              <span className="inline-block mx-auto md:mx-0 bg-accent/30 text-accent-foreground font-bold text-sm px-4 py-1.5 rounded-full text-center">
                 +1.200 Moldes Disponíveis
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-foreground">
                 Transforme Papel em Incríveis{" "}
                 <span className="text-gradient-orange">Mundos 3D</span> e Tire Seus Filhos das Telas!
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+              <p className="text-base md:text-xl text-muted-foreground leading-relaxed">
                 Mais de 1.200 moldes divertidos para imprimir, recortar e montar.
                 Crie memórias inesquecíveis e estimule o desenvolvimento da sua criança hoje mesmo.
               </p>
