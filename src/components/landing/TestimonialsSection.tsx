@@ -4,7 +4,6 @@ import { Star } from "lucide-react";
 import testimonialProduct1 from "@/assets/testimonial-product-1.jpg";
 import testimonialProduct2 from "@/assets/testimonial-product-2.jpg";
 import testimonialProduct3 from "@/assets/testimonial-product-3.jpg";
-import testimonialAvatar1 from "@/assets/testimonial-avatar-1.jpg";
 
 const testimonials = [
   {
@@ -13,7 +12,6 @@ const testimonials = [
     text: "Me surpreendeu muito a qualidade. As peças encaixam perfeito e o resultado final é incrível, muito melhor do que esperava. É um produto que realmente vale a pena montar.",
     image: testimonialProduct1,
     initials: "MG",
-    avatar: testimonialAvatar1,
   },
   {
     name: "Ana Rodrigues",
@@ -64,12 +62,8 @@ const TestimonialsSection = () => (
             >
               {/* Avatar overlapping top */}
               <div className="absolute -top-0 left-8 z-10">
-                <div className="w-14 h-14 rounded-full bg-muted flex items-center justify-center font-bold text-primary text-lg border-4 border-card shadow-lg overflow-hidden">
-                  {t.avatar ? (
-                    <img src={t.avatar} alt={t.name} className="w-full h-full object-cover" />
-                  ) : (
-                    t.initials
-                  )}
+                <div className="w-14 h-14 rounded-full bg-muted flex items-center justify-center font-bold text-primary text-lg border-4 border-card shadow-lg">
+                  {t.initials}
                 </div>
               </div>
 
