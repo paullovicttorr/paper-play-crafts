@@ -9,7 +9,7 @@ const GuaranteeSection = () => (
           <img src={guaranteeImg} alt="Selo de garantia" className="w-32 h-32 object-contain flex-shrink-0" />
           <div>
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
-              Garantia Duplicada: <span className="text-secondary">14 Dias</span>
+              Garantia Duplicada: <span className="text-secondary">30 Dias</span>
             </h2>
             <p className="text-muted-foreground leading-relaxed">
               Baixe os moldes, imprima e monte com sua criança. Se por qualquer motivo vocês não amarem
