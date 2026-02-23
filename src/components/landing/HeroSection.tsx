@@ -5,7 +5,7 @@ import heroImg from "@/assets/hero-paper-toys.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-hero py-16 md:py-24">
+    <section className="relative overflow-hidden bg-gradient-hero py-8 md:py-24">
       {/* Decorative blobs */}
       <div className="absolute -top-20 -left-20 w-72 h-72 rounded-full bg-primary/10 blur-3xl" />
       <div className="absolute -bottom-20 -right-20 w-72 h-72 rounded-full bg-accent/20 blur-3xl" />
