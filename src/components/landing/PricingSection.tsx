@@ -89,10 +89,10 @@ const PricingSection = () => (
                 >
                   <span className="flex flex-col items-center">
                     <span className="flex items-center gap-2">
-                      Garantir Meu Acesso Agora
+                      EU QUERO TUDO!
                       <ArrowRight className="w-5 h-5" />
                     </span>
-                    <span className="text-xs font-normal opacity-80">Compra Segura & Acesso Imediato</span>
+                    <span className="text-xs font-normal opacity-80">Compra segura e acesso imediato</span>
                   </span>
                 </motion.a>
 
