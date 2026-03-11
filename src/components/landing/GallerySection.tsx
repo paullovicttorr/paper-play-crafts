@@ -1,5 +1,5 @@
-import { useRef, useEffect, useState, useCallback } from "react";
-import { motion, useMotionValue, useAnimation, PanInfo } from "framer-motion";
+import { useRef, useEffect, useCallback } from "react";
+import { motion } from "framer-motion";
 import { FadeInUp } from "./Animations";
 import galleryHeroes from "@/assets/gallery-heroes-new.webp";
 import galleryAnimals from "@/assets/gallery-animals-new-v2.jpg";
@@ -17,59 +17,110 @@ const categories = [
   { src: galleryDiverse, label: "Diversos" },
 ];
 
-// Triple the items for seamless looping
 const duplicated = [...categories, ...categories, ...categories];
 
-const CARD_WIDTH = 272; // w-64 (256) + gap-6 (16) ≈ 272
-const SET_WIDTH = categories.length * CARD_WIDTH;
-const SPEED = 40; // px per second
-
 const GallerySection = () => {
-  const x = useMotionValue(0);
-  const controls = useAnimation();
-  const [isDragging, setIsDragging] = useState(false);
-  const containerRef = useRef<HTMLDivElement>(null);
+  const trackRef = useRef<HTMLDivElement>(null);
+  const animRef = useRef<number>(0);
+  const posRef = useRef(0);
+  const isDragging = useRef(false);
+  const startX = useRef(0);
+  const startPos = useRef(0);
+  const lastTime = useRef(0);
+  const paused = useRef(false);
+  const SPEED = 0.8; // px per frame at 60fps
 
-  const startAutoScroll = useCallback((fromX?: number) => {
-    const currentX = fromX ?? x.get();
-    // Normalize to stay within [-SET_WIDTH, 0] range
-    let normalizedX = currentX % SET_WIDTH;
-    if (normalizedX > 0) normalizedX -= SET_WIDTH;
-    
-    x.set(normalizedX);
-    
-    const remaining = Math.abs(normalizedX + SET_WIDTH);
-    const duration = remaining / SPEED;
+  const getSetWidth = useCallback(() => {
+    if (!trackRef.current) return 1;
+    return trackRef.current.scrollWidth / 3;
+  }, []);
 
-    controls.start({
-      x: normalizedX - SET_WIDTH,
-      transition: {
-        duration,
-        ease: "linear",
-        repeat: Infinity,
-        repeatType: "loop",
-      },
-    });
-  }, [x, controls]);
+  const applyTransform = useCallback(() => {
+    if (trackRef.current) {
+      trackRef.current.style.transform = `translateX(${posRef.current}px)`;
+    }
+  }, []);
+
+  const normalizePos = useCallback(() => {
+    const setW = getSetWidth();
+    if (posRef.current <= -setW * 2) {
+      posRef.current += setW;
+    } else if (posRef.current > 0) {
+      posRef.current -= setW;
+    }
+  }, [getSetWidth]);
+
+  const animate = useCallback((timestamp: number) => {
+    if (!paused.current && !isDragging.current) {
+      if (lastTime.current) {
+        const delta = timestamp - lastTime.current;
+        posRef.current -= SPEED * (delta / 16.67);
+        normalizePos();
+        applyTransform();
+      }
+      lastTime.current = timestamp;
+    } else {
+      lastTime.current = 0;
+    }
+    animRef.current = requestAnimationFrame(animate);
+  }, [normalizePos, applyTransform]);
 
   useEffect(() => {
-    startAutoScroll(-SET_WIDTH);
-  }, [startAutoScroll]);
+    // Start from middle set
+    posRef.current = -getSetWidth();
+    applyTransform();
+    animRef.current = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(animRef.current);
+  }, [animate, getSetWidth, applyTransform]);
 
-  // Keep x in sync with animation
+  // Mouse drag
+  const onMouseDown = useCallback((e: React.MouseEvent) => {
+    isDragging.current = true;
+    startX.current = e.clientX;
+    startPos.current = posRef.current;
+    document.body.style.userSelect = "none";
+  }, []);
+
+  const onMouseMove = useCallback((e: MouseEvent) => {
+    if (!isDragging.current) return;
+    const diff = e.clientX - startX.current;
+    posRef.current = startPos.current + diff;
+    normalizePos();
+    applyTransform();
+  }, [normalizePos, applyTransform]);
+
+  const onMouseUp = useCallback(() => {
+    isDragging.current = false;
+    document.body.style.userSelect = "";
+  }, []);
+
+  // Touch drag
+  const onTouchStart = useCallback((e: React.TouchEvent) => {
+    isDragging.current = true;
+    startX.current = e.touches[0].clientX;
+    startPos.current = posRef.current;
+  }, []);
+
+  const onTouchMove = useCallback((e: React.TouchEvent) => {
+    if (!isDragging.current) return;
+    const diff = e.touches[0].clientX - startX.current;
+    posRef.current = startPos.current + diff;
+    normalizePos();
+    applyTransform();
+  }, [normalizePos, applyTransform]);
+
+  const onTouchEnd = useCallback(() => {
+    isDragging.current = false;
+  }, []);
+
   useEffect(() => {
-    return controls.subscribe?.(() => {}) || undefined;
-  }, [controls]);
-
-  const handleDragStart = () => {
-    setIsDragging(true);
-    controls.stop();
-  };
-
-  const handleDragEnd = (_: any, info: PanInfo) => {
-    setIsDragging(false);
-    startAutoScroll();
-  };
+    document.addEventListener("mousemove", onMouseMove);
+    document.addEventListener("mouseup", onMouseUp);
+    return () => {
+      document.removeEventListener("mousemove", onMouseMove);
+      document.removeEventListener("mouseup", onMouseUp);
+    };
+  }, [onMouseMove, onMouseUp]);
 
   return (
     <section className="py-20 bg-background overflow-hidden">
@@ -93,18 +144,19 @@ const GallerySection = () => {
       </div>
 
       {/* Draggable + Auto-scroll carousel */}
-      <div ref={containerRef} className="relative cursor-grab active:cursor-grabbing">
-        <motion.div
-          className="flex gap-6 px-3 w-max"
-          style={{ x }}
-          animate={controls}
-          drag="x"
-          dragConstraints={{ left: -SET_WIDTH * 2, right: 0 }}
-          dragElastic={0.1}
-          onDragStart={handleDragStart}
-          onDragEnd={handleDragEnd}
-          onHoverStart={() => { if (!isDragging) controls.stop(); }}
-          onHoverEnd={() => { if (!isDragging) startAutoScroll(); }}
+      <div
+        className="relative cursor-grab active:cursor-grabbing"
+        onMouseEnter={() => { paused.current = true; }}
+        onMouseLeave={() => { paused.current = false; }}
+        onMouseDown={onMouseDown}
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
+      >
+        <div
+          ref={trackRef}
+          className="flex gap-6 px-3 w-max will-change-transform"
+          style={{ transform: "translateX(0px)" }}
         >
           {duplicated.map((cat, i) => (
             <motion.div
@@ -120,19 +172,16 @@ const GallerySection = () => {
                 loading="lazy"
                 draggable={false}
               />
-              {/* Gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-              {/* Badge */}
               <span className="absolute top-4 left-4 bg-white/20 backdrop-blur-md border border-white/30 text-white text-[10px] uppercase tracking-widest font-semibold px-3 py-1 rounded-full">
                 Categoria
               </span>
-              {/* Title */}
               <span className="absolute bottom-5 left-5 text-white text-xl font-bold drop-shadow-lg">
                 {cat.label}
               </span>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
