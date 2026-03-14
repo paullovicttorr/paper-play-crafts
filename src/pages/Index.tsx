@@ -9,10 +9,12 @@ import PricingSection from "@/components/landing/PricingSection";
 import GuaranteeSection from "@/components/landing/GuaranteeSection";
 import FAQSection from "@/components/landing/FAQSection";
 import FooterSection from "@/components/landing/FooterSection";
+import ExitIntentPopup from "@/components/landing/ExitIntentPopup";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <ExitIntentPopup />
       <AnnouncementBar />
       <HeroSection />
       <HowItWorksSection />
