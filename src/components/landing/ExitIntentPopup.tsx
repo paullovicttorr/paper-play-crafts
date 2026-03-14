@@ -102,7 +102,8 @@ const ExitIntentPopup = () => {
               href="https://pay.lowify.com.br/go.php?offer=4hv2a3k"
               className="w-full py-4 flex items-center justify-center text-center bg-secondary hover:bg-secondary/90 text-secondary-foreground font-bold text-lg rounded-lg shadow-lg transition-transform hover:scale-[1.03] pulse-glow-green"
             >
-              SIM! Quero acesso completo por R$ 15,90
+              <span className="hidden md:inline">SIM! Quero acesso completo por R$ 15,90</span>
+              <span className="md:hidden">SIM! Quero Tudo com Desconto</span>
             </a>
 
             {/* Footer */}
