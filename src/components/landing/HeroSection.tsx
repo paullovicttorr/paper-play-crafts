@@ -58,12 +58,18 @@ const HeroSection = () => {
 
           {/* Hero Image */}
           <FadeInUp delay={0.2}>
-            <div className="relative flex items-center justify-center">
-              {/* Yellow background shape */}
-              <div className="absolute w-[85%] h-[90%] bg-secondary rounded-3xl rotate-3 translate-x-3 -translate-y-2 shadow-md" />
+            <div className="relative flex items-center justify-center w-full">
+              {/* Yellow background shape - slides in on scroll */}
+              <motion.div
+                initial={{ x: 0, opacity: 0 }}
+                whileInView={{ x: 6, opacity: 1 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
+                className="absolute w-[calc(100%-8px)] h-[calc(100%-8px)] bg-secondary rounded-3xl rotate-2 shadow-md"
+              />
 
               {/* Video frame */}
-              <div className="relative z-10 rounded-3xl overflow-hidden border-[6px] border-card shadow-xl aspect-[9/16] w-[65%] md:w-[60%] max-w-[280px]">
+              <div className="relative z-10 rounded-3xl overflow-hidden border-[6px] border-card shadow-xl aspect-[9/16] w-[75%] max-w-[300px] md:w-[60%] md:max-w-[280px]">
                 <iframe
                   src="https://www.youtube.com/embed/zkusgjHNHy0?autoplay=1&mute=1&loop=1&playlist=zkusgjHNHy0&controls=1&rel=0"
                   title="Demonstração Mundo 3D em Papel"
