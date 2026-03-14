@@ -58,23 +58,31 @@ const HeroSection = () => {
 
           {/* Hero Image */}
           <FadeInUp delay={0.2}>
-            <motion.div
-              animate={{ y: [0, -12, 0] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-              className="relative"
-            >
-              <div className="rounded-3xl overflow-hidden shadow-card-hover border-4 border-card aspect-square">
-                <img src={heroImg} alt="Brinquedos de papel 3D coloridos" className="w-full h-full object-cover" />
+            <div className="relative flex items-center justify-center">
+              {/* Yellow background shape */}
+              <div className="absolute w-[85%] h-[90%] bg-secondary rounded-3xl rotate-3 translate-x-3 -translate-y-2 shadow-md" />
+
+              {/* Video frame */}
+              <div className="relative z-10 rounded-3xl overflow-hidden border-[6px] border-card shadow-xl aspect-[9/16] w-[65%] md:w-[60%] max-w-[280px]">
+                <iframe
+                  src="https://www.youtube.com/embed/zkusgjHNHy0?autoplay=1&mute=1&loop=1&playlist=zkusgjHNHy0&controls=1&rel=0"
+                  title="Demonstração Mundo 3D em Papel"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                  style={{ border: 0 }}
+                />
               </div>
+
               {/* Floating badge */}
               <motion.div
                 animate={{ rotate: [0, 5, -5, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -bottom-4 -right-4 bg-secondary text-secondary-foreground font-bold px-5 py-3 rounded-2xl shadow-lg text-sm"
+                className="absolute -bottom-4 -right-2 md:-right-4 z-20 bg-secondary text-secondary-foreground font-bold px-5 py-3 rounded-2xl shadow-lg text-sm"
               >
                 ⭐ Acesso Imediato
               </motion.div>
-            </motion.div>
+            </div>
           </FadeInUp>
         </div>
       </div>
