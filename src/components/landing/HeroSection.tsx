@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { FadeInUp } from "./Animations";
 import { ArrowRight } from "lucide-react";
 import heroImg from "@/assets/hero-paper-toys.jpg";
@@ -6,10 +6,21 @@ import avatarFace1 from "@/assets/avatar-face-1.jpeg";
 import avatarFace2 from "@/assets/avatar-face-2.jpeg";
 import avatarFace3 from "@/assets/avatar-face-3.jpeg";
 import avatarFace4 from "@/assets/avatar-face-4.jpeg";
+import { useRef } from "react";
 
 const avatarFaces = [avatarFace1, avatarFace2, avatarFace3, avatarFace4];
 
 const HeroSection = () => {
+  const videoContainerRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: videoContainerRef,
+    offset: ["start end", "end start"],
+  });
+
+  // Parallax: shadow shifts from 8px to 14px as user scrolls
+  const shadowX = useTransform(scrollYProgress, [0, 1], [8, 14]);
+  const shadowY = useTransform(scrollYProgress, [0, 1], [8, 14]);
+
   return (
     <section className="relative overflow-hidden bg-gradient-hero py-8 md:py-24">
       {/* Decorative blobs */}
@@ -56,16 +67,19 @@ const HeroSection = () => {
             </div>
           </FadeInUp>
 
-          {/* Hero Image */}
+          {/* Hero Video */}
           <FadeInUp delay={0.2}>
-            <div className="relative flex items-center justify-center w-full">
-              {/* Yellow background shape - slides in on scroll */}
+            {/* Floating animation wrapper */}
+            <motion.div
+              ref={videoContainerRef}
+              animate={{ y: [0, -5, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              className="relative flex items-center justify-center w-full"
+            >
+              {/* Hard shadow background - parallax driven */}
               <motion.div
-                initial={{ x: 0, opacity: 0 }}
-                whileInView={{ x: 6, opacity: 1 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
-                className="absolute w-[calc(100%-8px)] h-[calc(100%-8px)] bg-secondary rounded-3xl rotate-2 shadow-md"
+                style={{ x: shadowX, y: shadowY }}
+                className="absolute w-[75%] max-w-[300px] md:w-[60%] md:max-w-[280px] aspect-[9/16] bg-secondary rounded-3xl"
               />
 
               {/* Video frame */}
@@ -88,7 +102,7 @@ const HeroSection = () => {
               >
                 ⭐ Acesso Imediato
               </motion.div>
-            </div>
+            </motion.div>
           </FadeInUp>
         </div>
       </div>
