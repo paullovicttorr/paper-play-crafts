@@ -108,11 +108,11 @@ const BonusSection = () => (
 
                 {/* Price */}
                 <div className="flex items-center justify-between border-t border-border pt-4">
-                  <span className="line-through text-sm text-muted-foreground">
+                  <span className="line-through text-sm text-destructive">
                     De {b.from}
                   </span>
                   <span className="text-secondary font-bold text-base">
-                    POR: GRÁTIS
+                    POR: R$00,00
                   </span>
                 </div>
               </div>
