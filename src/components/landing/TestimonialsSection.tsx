@@ -36,7 +36,7 @@ const testimonials = [
     name: "Carlos José",
     role: "FRENTISTA",
     text: "Comprei para minha sobrinha e ela adorou! São tantas opções que ela não para de pedir para imprimir mais. Vale cada centavo!",
-    image: testimonialProduct1,
+    image: testimonialProduct4,
     avatar: testimonialAvatar4,
   },
 ];
