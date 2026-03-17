@@ -71,7 +71,7 @@ const BonusSection = () => (
             Leve Hoje e Ganhe
           </h2>
           <span className="inline-block bg-accent text-accent-foreground text-2xl md:text-3xl font-bold px-5 py-1.5 rounded-md mt-2">
-            3 Bônus Exclusivos!
+            6 Bônus Exclusivos!
           </span>
         </div>
       </FadeInUp>
