@@ -78,7 +78,7 @@ const PricingSection = () => (
                   <div>
                     <p className="font-bold text-sm text-foreground">LEVE 6 BÔNUS EXTRAS!</p>
                     <p className="text-xs text-muted-foreground">
-                      <span className="line-through">Valor: R$ 202,00</span>{" "}
+                      <span className="line-through text-destructive">Valor: R$ 202,00</span>{" "}
                        <span className="bg-secondary/15 text-secondary font-bold px-1.5 py-0.5 rounded text-xs">HOJE: R$ 0</span>
                     </p>
                   </div>
