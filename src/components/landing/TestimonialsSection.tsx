@@ -93,7 +93,7 @@ const TestimonialsSection = () => (
                     <img
                       src={t.image}
                       alt={`Produto feito por ${t.name}`}
-                      className="w-full h-44 object-cover"
+                      className="w-full aspect-square object-cover"
                       loading="lazy"
                     />
                   </div>
