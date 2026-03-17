@@ -37,7 +37,7 @@ const HeroSection = () => {
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-foreground">
                 Transforme Papel em Incríveis{" "}
-                <span className="text-gradient-orange">Mundos 3D</span> e Tire Seus Filhos das Telas!
+                <span className="text-gradient-orange">Mundos 3D</span> e Tire Seu Filho das Telas!
               </h1>
               <p className="text-base md:text-xl text-muted-foreground leading-relaxed">
                 Mais de 1.200 moldes divertidos para imprimir, recortar e montar.
