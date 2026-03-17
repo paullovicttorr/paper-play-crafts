@@ -56,6 +56,9 @@ const PricingSection = () => (
                     { icon: "🏠", text: "Casinhas e Cenários" },
                     { icon: "🚗", text: "Veículos" },
                     { icon: "🔤", text: "Alfabeto e Números 3D" },
+                    { icon: "🧩", text: "100 Jogos Quebra Cabeça" },
+                    { icon: "🧠", text: "100 Jogos da Memória" },
+                    { icon: "🎨", text: "100 Atividades para Colorir e Recortar" },
                   ].map((item, i) => (
                     <li key={i} className="flex items-center gap-2 text-foreground">
                       <Check className="w-4 h-4 text-secondary flex-shrink-0" />
