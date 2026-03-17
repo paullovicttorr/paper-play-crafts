@@ -4,6 +4,7 @@ import { Star } from "lucide-react";
 import testimonialProduct1 from "@/assets/testimonial-product-1.jpg";
 import testimonialProduct2 from "@/assets/testimonial-product-2.jpg";
 import testimonialProduct3 from "@/assets/testimonial-product-3.jpg";
+import testimonialProduct4 from "@/assets/testimonial-product-4.jpg";
 import testimonialAvatar1 from "@/assets/testimonial-avatar-1.jpeg";
 import testimonialAvatar2 from "@/assets/testimonial-avatar-2.jpeg";
 import testimonialAvatar3 from "@/assets/testimonial-avatar-3.jpeg";
@@ -35,7 +36,7 @@ const testimonials = [
     name: "Carlos José",
     role: "FRENTISTA",
     text: "Comprei para minha sobrinha e ela adorou! São tantas opções que ela não para de pedir para imprimir mais. Vale cada centavo!",
-    image: testimonialProduct1,
+    image: testimonialProduct4,
     avatar: testimonialAvatar4,
   },
 ];
@@ -92,7 +93,7 @@ const TestimonialsSection = () => (
                     <img
                       src={t.image}
                       alt={`Produto feito por ${t.name}`}
-                      className="w-full h-44 object-cover"
+                      className="w-full aspect-square object-cover"
                       loading="lazy"
                     />
                   </div>
