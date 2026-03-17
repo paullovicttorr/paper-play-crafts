@@ -4,6 +4,9 @@ import { Gift } from "lucide-react";
 import bonusHeroes from "@/assets/bonus-heroes.jpg";
 import bonusAlphabet from "@/assets/bonus-alphabet.jpg";
 import bonusHouses from "@/assets/bonus-houses.jpg";
+import bonusPuzzles from "@/assets/bonus-puzzles.png";
+import bonusMemory from "@/assets/bonus-memory.png";
+import bonusColoring from "@/assets/bonus-coloring.png";
 
 const bonuses = [
   {
@@ -23,6 +26,24 @@ const bonuses = [
     description: "Letras e números em formato 3D para as crianças aprenderem brincando enquanto montam suas próprias criações educativas.",
     from: "R$ 27,00",
     image: bonusAlphabet,
+  },
+  {
+    title: "Desafios que Prendem a Atenção (Sem Tela)",
+    description: "100 quebra-cabeças prontos para imprimir que estimulam raciocínio, foco e paciência enquanto a criança se diverte montando. Perfeito para substituir o tempo de tela por um desafio envolvente.",
+    from: "R$ 37,00",
+    image: bonusPuzzles,
+  },
+  {
+    title: "Treine a Memória Brincando",
+    description: "Jogos simples e viciantes que desenvolvem memória, concentração e agilidade mental. Ideal para momentos em família longe do celular.",
+    from: "R$ 27,00",
+    image: bonusMemory,
+  },
+  {
+    title: "Criatividade Sem Limites (Imprima e Use Agora)",
+    description: "Mais de 100 atividades para colorir, recortar e criar. Estimulando coordenação motora, imaginação e criatividade de forma leve e divertida.",
+    from: "R$ 27,00",
+    image: bonusColoring,
   },
 ];
 
@@ -50,7 +71,7 @@ const BonusSection = () => (
             Leve Hoje e Ganhe
           </h2>
           <span className="inline-block bg-accent text-accent-foreground text-2xl md:text-3xl font-bold px-5 py-1.5 rounded-md mt-2">
-            3 Bônus Exclusivos!
+            6 Bônus Exclusivos!
           </span>
         </div>
       </FadeInUp>
