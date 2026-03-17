@@ -7,19 +7,20 @@ import testimonialProduct3 from "@/assets/testimonial-product-3.jpg";
 import testimonialAvatar1 from "@/assets/testimonial-avatar-1.jpeg";
 import testimonialAvatar2 from "@/assets/testimonial-avatar-2.jpeg";
 import testimonialAvatar3 from "@/assets/testimonial-avatar-3.jpeg";
+import testimonialAvatar4 from "@/assets/testimonial-avatar-4.jpeg";
 
 const testimonials = [
   {
     name: "Maria González",
     role: "MÃE DE 2",
-    text: "Me surpreendeu muito a qualidade. As peças encaixam perfeito e o resultado final é incrível, muito melhor do que esperava. É um produto que realmente vale a pena montar.",
+    text: "Meu filho passou a semana toda montando os brinquedos! Finalmente consegui tirar ele do tablet. Material incrível!",
     image: testimonialProduct1,
     avatar: testimonialAvatar1,
   },
   {
     name: "Ana Rodrigues",
     role: "PROFESSORA",
-    text: "As instruções são super claras e fáceis de seguir. Não precisa de experiência prévia, tudo está bem explicado passo a passo. Foi uma experiência muito divertida e relaxante.",
+    text: "Estou impressionada com a qualidade e variedade. Meus 3 filhos adoraram e estamos tendo momentos maravilhosos em família.",
     image: testimonialProduct2,
     avatar: testimonialAvatar2,
   },
@@ -29,6 +30,13 @@ const testimonials = [
     text: "Disfrutei cada parte da montagem. É intuitivo, bem pensado e muito satisfatório ver como vai tomando forma. Ideal para fazer sozinho ou em família.",
     image: testimonialProduct3,
     avatar: testimonialAvatar3,
+  },
+  {
+    name: "Carlos José",
+    role: "FRENTISTA",
+    text: "Comprei para minha sobrinha e ela adorou! São tantas opções que ela não para de pedir para imprimir mais. Vale cada centavo!",
+    image: testimonialProduct1,
+    avatar: testimonialAvatar4,
   },
 ];
 
