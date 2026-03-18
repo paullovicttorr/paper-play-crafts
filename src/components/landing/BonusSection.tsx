@@ -114,7 +114,7 @@ const BonusSection = () => (
                   </span>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </FadeInUp>
         ))}
       </div>
