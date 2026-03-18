@@ -103,8 +103,12 @@ const GallerySection = () => {
 
   const onTouchMove = useCallback((e: React.TouchEvent) => {
     if (!isDragging.current) return;
-    const diff = e.touches[0].clientX - startX.current;
-    posRef.current = startPos.current + diff;
+    const diffX = e.touches[0].clientX - startX.current;
+    // Only handle horizontal drags — let vertical scroll pass through
+    if (Math.abs(diffX) > 5) {
+      e.preventDefault();
+    }
+    posRef.current = startPos.current + diffX;
     normalizePos();
     applyTransform();
   }, [normalizePos, applyTransform]);
@@ -146,6 +150,7 @@ const GallerySection = () => {
       {/* Draggable + Auto-scroll carousel */}
       <div
         className="relative cursor-grab active:cursor-grabbing"
+        style={{ touchAction: "pan-y" }}
         onMouseEnter={() => { paused.current = true; }}
         onMouseLeave={() => { paused.current = false; }}
         onMouseDown={onMouseDown}

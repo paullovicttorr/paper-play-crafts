@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { FadeInUp } from "./Animations";
 import { Star } from "lucide-react";
 import testimonialProduct1 from "@/assets/testimonial-product-1.jpg";
@@ -66,12 +65,8 @@ const TestimonialsSection = () => (
 
       <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
         {testimonials.map((t, i) => (
-          <FadeInUp key={i} delay={i * 0.15}>
-            <motion.div
-              whileHover={{ y: -4 }}
-              transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              className="relative pt-8 group"
-            >
+          <FadeInUp key={i} delay={Math.min(i * 0.08, 0.24)}>
+            <div className="relative pt-8 group">
               {/* Avatar overlapping top */}
               <div className="absolute -top-0 left-8 z-10">
                 <div className="w-14 h-14 rounded-full bg-muted flex items-center justify-center font-bold text-primary text-lg border-4 border-card shadow-lg overflow-hidden">
@@ -112,7 +107,7 @@ const TestimonialsSection = () => (
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </FadeInUp>
         ))}
       </div>

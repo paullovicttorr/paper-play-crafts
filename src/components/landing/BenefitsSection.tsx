@@ -21,7 +21,7 @@ const BenefitsSection = () => (
       </FadeInUp>
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
         {benefits.map((b, i) => (
-          <FadeInUp key={i} delay={i * 0.12}>
+          <FadeInUp key={i} delay={Math.min(i * 0.08, 0.24)}>
             <TiltCard className="bg-card rounded-3xl p-7 text-center border border-border h-full">
               <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
                 <b.icon className="w-7 h-7" />
