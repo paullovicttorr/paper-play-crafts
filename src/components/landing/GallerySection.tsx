@@ -146,6 +146,7 @@ const GallerySection = () => {
       {/* Draggable + Auto-scroll carousel */}
       <div
         className="relative cursor-grab active:cursor-grabbing"
+        style={{ touchAction: "pan-y" }}
         onMouseEnter={() => { paused.current = true; }}
         onMouseLeave={() => { paused.current = false; }}
         onMouseDown={onMouseDown}
