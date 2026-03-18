@@ -1,25 +1,34 @@
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { FadeInUp } from "./Animations";
 import { ArrowRight } from "lucide-react";
-import heroImg from "@/assets/hero-paper-toys.jpg";
 import avatarFace1 from "@/assets/avatar-face-1.jpeg";
 import avatarFace2 from "@/assets/avatar-face-2.jpeg";
 import avatarFace3 from "@/assets/avatar-face-3.jpeg";
 import avatarFace4 from "@/assets/avatar-face-4.jpeg";
-import { useRef } from "react";
+import heroCarousel1 from "@/assets/hero-carousel-1.jpeg";
+import heroCarousel2 from "@/assets/hero-carousel-2.jpeg";
+import heroCarousel3 from "@/assets/hero-carousel-3.jpeg";
+import heroCarousel4 from "@/assets/hero-carousel-4.jpeg";
+import heroCarousel5 from "@/assets/hero-carousel-5.jpeg";
+import heroCarousel6 from "@/assets/hero-carousel-6.jpeg";
+import { useEffect, useRef, useState } from "react";
 
 const avatarFaces = [avatarFace1, avatarFace2, avatarFace3, avatarFace4];
+const carouselImages = [
+  heroCarousel1, heroCarousel2, heroCarousel3,
+  heroCarousel4, heroCarousel5, heroCarousel6,
+];
 
 const HeroSection = () => {
-  const videoContainerRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: videoContainerRef,
-    offset: ["start end", "end start"],
-  });
+  const [current, setCurrent] = useState(0);
+  const timerRef = useRef<ReturnType<typeof setInterval>>();
 
-  // Parallax: shadow shifts from 8px to 14px as user scrolls
-  const shadowX = useTransform(scrollYProgress, [0, 1], [8, 14]);
-  const shadowY = useTransform(scrollYProgress, [0, 1], [8, 14]);
+  useEffect(() => {
+    timerRef.current = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % carouselImages.length);
+    }, 3500);
+    return () => clearInterval(timerRef.current);
+  }, []);
 
   return (
     <section className="relative overflow-hidden bg-gradient-hero py-8 md:py-24">
@@ -67,31 +76,24 @@ const HeroSection = () => {
             </div>
           </FadeInUp>
 
-          {/* Hero Video */}
+          {/* Hero Carousel */}
           <FadeInUp delay={0.2}>
-            {/* Floating animation wrapper */}
-            <motion.div
-              ref={videoContainerRef}
-              animate={{ y: [0, -5, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="relative flex items-center justify-center w-full"
-            >
-              {/* Hard shadow background - parallax driven */}
-              <motion.div
-                style={{ x: shadowX, y: shadowY }}
-                className="absolute w-[75%] max-w-[300px] md:w-[60%] md:max-w-[280px] aspect-[9/16] bg-secondary rounded-3xl"
-              />
+            <div className="relative flex items-center justify-center w-full">
+              {/* Shadow background */}
+              <div className="absolute w-[90%] max-w-[340px] md:w-[70%] md:max-w-[320px] aspect-[9/16] bg-secondary rounded-3xl translate-x-2 translate-y-2 md:translate-x-3 md:translate-y-3" />
 
-              {/* Video frame */}
-              <div className="relative z-10 rounded-3xl overflow-hidden border-[6px] border-card shadow-xl aspect-[9/16] w-[75%] max-w-[300px] md:w-[60%] md:max-w-[280px]">
-                <iframe
-                  src="https://www.youtube.com/embed/zkusgjHNHy0?autoplay=1&mute=1&loop=1&playlist=zkusgjHNHy0&controls=1&rel=0"
-                  title="Demonstração Mundo 3D em Papel"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full"
-                  style={{ border: 0 }}
-                />
+              {/* Carousel frame */}
+              <div className="relative z-10 rounded-3xl overflow-hidden border-[6px] border-card shadow-xl aspect-[9/16] w-[90%] max-w-[340px] md:w-[70%] md:max-w-[320px]">
+                {carouselImages.map((src, i) => (
+                  <img
+                    key={i}
+                    src={src}
+                    alt={`Prova social ${i + 1}`}
+                    loading={i === 0 ? "eager" : "lazy"}
+                    className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-in-out"
+                    style={{ opacity: current === i ? 1 : 0 }}
+                  />
+                ))}
               </div>
 
               {/* Floating badge */}
@@ -102,7 +104,7 @@ const HeroSection = () => {
               >
                 ⭐ Acesso Imediato
               </motion.div>
-            </motion.div>
+            </div>
           </FadeInUp>
         </div>
       </div>
