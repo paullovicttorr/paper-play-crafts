@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { FadeInUp } from "./Animations";
 import { Star } from "lucide-react";
 import testimonialProduct1 from "@/assets/testimonial-product-1.jpg";
