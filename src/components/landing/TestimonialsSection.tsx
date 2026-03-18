@@ -1,5 +1,6 @@
 import { FadeInUp } from "./Animations";
 import { Star } from "lucide-react";
+
 import testimonialProduct1 from "@/assets/testimonial-product-1.jpg";
 import testimonialProduct2 from "@/assets/testimonial-product-2.jpg";
 import testimonialProduct3 from "@/assets/testimonial-product-3.jpg";
