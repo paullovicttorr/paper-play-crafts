@@ -107,7 +107,7 @@ const TestimonialsSection = () => (
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </FadeInUp>
         ))}
       </div>

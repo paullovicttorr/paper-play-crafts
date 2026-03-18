@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { FadeInUp } from "./Animations";
 import { Gift } from "lucide-react";
 import bonusHeroes from "@/assets/bonus-heroes.jpg";

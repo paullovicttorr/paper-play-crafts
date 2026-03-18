@@ -20,7 +20,7 @@ const HowItWorksSection = () => (
       </FadeInUp>
       <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
         {steps.map((step, i) => (
-          <FadeInUp key={i} delay={i * 0.15}>
+          <FadeInUp key={i} delay={i * 0.1}>
             <TiltCard className="bg-card rounded-3xl p-8 text-center border border-border">
               <div className={`w-16 h-16 mx-auto mb-4 rounded-2xl bg-muted flex items-center justify-center ${step.color}`}>
                 <step.icon className="w-8 h-8" />
