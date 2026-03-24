@@ -7,11 +7,11 @@ import {
 } from "@/components/ui/accordion";
 
 const faqs = [
-  { q: "Precisa de impressora colorida?", a: "Não! Você pode imprimir em preto e branco e pintar depois com lápis de cor ou giz de cera. As crianças adoram colorir antes de montar!" },
-  { q: "Qual papel devo usar?", a: "Papel sulfite normal já funciona muito bem. Para modelos que duram mais, recomendamos papel fotográfico ou vergê (mais grosso)." },
-  { q: "A partir de qual idade?", a: "Com ajuda de um adulto, crianças a partir de 3 anos podem brincar. Sozinhas, a partir de 6 anos conseguem montar com facilidade." },
-  { q: "Como recebo o acesso?", a: "Assim que o pagamento for aprovado, você recebe um e-mail com o link de acesso imediato a todos os moldes e bônus." },
-  { q: "Posso imprimir quantas vezes quiser?", a: "Sim! O acesso é vitalício e ilimitado. Imprima quantas vezes quiser, para sempre." },
+  { q: "¿Necesito impresora a color?", a: "No. Puedes imprimir en blanco y negro y colorear después." },
+  { q: "¿Qué papel usar?", a: "Papel normal funciona perfecto. Para más durabilidad, usa papel más grueso." },
+  { q: "¿Desde qué edad?", a: "Desde los 3 años con ayuda, desde 6 pueden hacerlo solos." },
+  { q: "¿Cómo recibo acceso?", a: "Recibes un enlace inmediato después del pago." },
+  { q: "¿Puedo imprimir ilimitado?", a: "Sí, acceso de por vida." },
 ];
 
 const FAQSection = () => (
