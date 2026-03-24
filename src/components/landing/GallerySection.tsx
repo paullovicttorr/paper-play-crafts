@@ -132,16 +132,16 @@ const GallerySection = () => {
         <FadeInUp>
           <div className="text-center">
             <span className="text-primary font-bold text-sm uppercase tracking-widest">
-              ✨ EXPLORE A COLEÇÃO
+              ✨ EXPLORA LA COLECCIÓN
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mt-3 text-foreground">
-              Olha só o que eles vão fazer{" "}
+              Mira todo lo que podrán{" "}
               <span className="inline-block bg-accent text-accent-foreground px-4 py-1 rounded-md mt-1">
-                criar juntos
+                crear juntos
               </span>
             </h2>
             <p className="text-muted-foreground mt-4 max-w-lg mx-auto">
-              Deslize para descobrir as categorias que tornarão suas tardes mágicas.
+              Animales, personajes, vehículos, casas, escenarios y mucho más… Cada día una nueva aventura sin pantallas.
             </p>
           </div>
         </FadeInUp>
