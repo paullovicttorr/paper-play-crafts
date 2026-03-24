@@ -99,7 +99,7 @@ const ExitIntentPopup = () => {
 
             {/* CTA */}
             <a
-              href="https://pay.lowify.com.br/go.php?offer=4hv2a3k"
+              href="https://pay.hotmart.com/G105060095P?off=k9b4s7wo&checkoutMode=10&bid=1774385043062"
               className="w-full py-4 flex items-center justify-center text-center bg-secondary hover:bg-secondary/90 text-secondary-foreground font-bold text-lg rounded-lg shadow-lg transition-transform hover:scale-[1.03] pulse-glow-green"
             >
               SÍ, QUIERO TODO POR $5.90
