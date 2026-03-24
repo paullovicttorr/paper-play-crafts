@@ -2,9 +2,9 @@ import { FadeInUp, TiltCard } from "./Animations";
 import { Printer, Scissors, Smile } from "lucide-react";
 
 const steps = [
-  { icon: Printer, title: "1. Imprima", desc: "Escolha o modelo e imprima em casa com qualquer impressora.", color: "text-primary" },
-  { icon: Scissors, title: "2. Recorte e Dobre", desc: "Siga as linhas pontilhadas de forma fácil e divertida.", color: "text-sky" },
-  { icon: Smile, title: "3. Brinque!", desc: "Pronto! Horas de diversão e criatividade garantidas.", color: "text-secondary" },
+  { icon: Printer, title: "1. Imprime", desc: "Elige cualquier modelo e imprime en casa.", color: "text-primary" },
+  { icon: Scissors, title: "2. Recorta y dobla", desc: "Sigue las líneas fácilmente.", color: "text-sky" },
+  { icon: Smile, title: "3. ¡Juega!", desc: "Diversión asegurada por horas sin pantallas.", color: "text-secondary" },
 ];
 
 const HowItWorksSection = () => (
@@ -12,9 +12,9 @@ const HowItWorksSection = () => (
     <div className="container mx-auto px-4">
       <FadeInUp>
         <div className="text-center mb-14">
-          <span className="text-primary font-bold text-sm uppercase tracking-wider">Simples assim</span>
+          <span className="text-primary font-bold text-sm uppercase tracking-wider">Así de simple</span>
           <h2 className="text-3xl md:text-4xl font-bold mt-2 text-foreground">
-            É tão simples como <span className="text-gradient-orange">1, 2, 3...</span>
+            Es tan simple como <span className="text-gradient-orange">1, 2, 3…</span>
           </h2>
         </div>
       </FadeInUp>

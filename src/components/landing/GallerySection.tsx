@@ -9,10 +9,10 @@ import galleryMasks from "@/assets/gallery-masks-new.jpg";
 import galleryDiverse from "@/assets/gallery-diverse-new.jpg";
 
 const categories = [
-  { src: galleryHeroes, label: "Heróis" },
-  { src: galleryAnimals, label: "Animais" },
-  { src: galleryCharacters, label: "Personagens" },
-  { src: galleryVehicles, label: "Veículos" },
+  { src: galleryHeroes, label: "Héroes" },
+  { src: galleryAnimals, label: "Animales" },
+  { src: galleryCharacters, label: "Personajes" },
+  { src: galleryVehicles, label: "Vehículos" },
   { src: galleryMasks, label: "Máscaras" },
   { src: galleryDiverse, label: "Diversos" },
 ];
@@ -132,16 +132,16 @@ const GallerySection = () => {
         <FadeInUp>
           <div className="text-center">
             <span className="text-primary font-bold text-sm uppercase tracking-widest">
-              ✨ EXPLORE A COLEÇÃO
+              ✨ EXPLORA LA COLECCIÓN
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mt-3 text-foreground">
-              Olha só o que eles vão fazer{" "}
+              Mira todo lo que podrán{" "}
               <span className="inline-block bg-accent text-accent-foreground px-4 py-1 rounded-md mt-1">
-                criar juntos
+                crear juntos
               </span>
             </h2>
             <p className="text-muted-foreground mt-4 max-w-lg mx-auto">
-              Deslize para descobrir as categorias que tornarão suas tardes mágicas.
+              Animales, personajes, vehículos, casas, escenarios y mucho más… Cada día una nueva aventura sin pantallas.
             </p>
           </div>
         </FadeInUp>
@@ -179,7 +179,7 @@ const GallerySection = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
               <span className="absolute top-4 left-4 bg-white/20 backdrop-blur-md border border-white/30 text-white text-[10px] uppercase tracking-widest font-semibold px-3 py-1 rounded-full">
-                Categoria
+                Categoría
               </span>
               <span className="absolute bottom-5 left-5 text-white text-xl font-bold drop-shadow-lg">
                 {cat.label}

@@ -42,15 +42,15 @@ const HeroSection = () => {
           <FadeInUp>
             <div className="space-y-3 md:space-y-4 text-center md:text-left flex flex-col items-center md:items-start">
               <span className="inline-block mx-auto md:mx-0 bg-accent/30 text-accent-foreground font-bold text-sm px-4 py-1.5 rounded-full text-center">
-                +1.200 Moldes Disponíveis
+                +1.200 Moldes Disponibles
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-foreground">
-                Transforme Papel em Incríveis{" "}
-                <span className="text-gradient-orange">Mundos 3D</span> e Tire Seu Filho das Telas!
+                Transforma papel en increíbles{" "}
+                <span className="text-gradient-orange">mundos 3D</span> y saca a tu hijo de las pantallas
               </h1>
               <p className="text-base md:text-xl text-muted-foreground leading-relaxed">
-                Mais de 1.200 moldes divertidos para imprimir, recortar e montar.
-                Crie memórias inesquecíveis e estimule o desenvolvimento da sua criança hoje mesmo.
+                Más de 1.200 moldes listos para imprimir, recortar y montar.
+                Crea momentos inolvidables mientras tu hijo aprende jugando — lejos del celular.
               </p>
               <motion.a
                 href="#oferta"
@@ -58,19 +58,19 @@ const HeroSection = () => {
                 whileTap={{ scale: 0.97 }}
                 className="inline-flex items-center gap-3 bg-primary text-primary-foreground font-bold text-lg px-8 py-4 rounded-2xl pulse-glow cursor-pointer"
               >
-                Quero Acessar os 1.200 Moldes
+                QUIERO ACCEDER A LOS 1.200 MOLDES
                 <ArrowRight className="w-5 h-5" />
               </motion.a>
               <div className="flex items-center gap-6 pt-2">
                 <div className="flex -space-x-2">
                   {avatarFaces.map((src, i) => (
                     <div key={i} className="w-9 h-9 rounded-full border-2 border-card overflow-hidden">
-                      <img src={src} alt="Cliente" className="w-full h-full object-cover" />
+                      <img src={src} alt="Cliente satisfecho" className="w-full h-full object-cover" />
                     </div>
                   ))}
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  <strong className="text-foreground">+5.000 famílias</strong> já aproveitam
+                  <strong className="text-foreground">+5.000 familias</strong> ya lo están disfrutando
                 </p>
               </div>
             </div>
@@ -88,7 +88,7 @@ const HeroSection = () => {
                   <img
                     key={i}
                     src={src}
-                    alt={`Prova social ${i + 1}`}
+                    alt={`Prueba social ${i + 1}`}
                     loading={i === 0 ? "eager" : "lazy"}
                     className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-in-out"
                     style={{ opacity: current === i ? 1 : 0 }}
@@ -102,7 +102,7 @@ const HeroSection = () => {
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                 className="absolute -bottom-4 -right-2 md:-right-4 z-20 bg-secondary text-secondary-foreground font-bold px-5 py-3 rounded-2xl shadow-lg text-sm"
               >
-                ⭐ Acesso Imediato
+                ⭐ Acceso Inmediato
               </motion.div>
             </div>
           </FadeInUp>

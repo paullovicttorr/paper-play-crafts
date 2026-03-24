@@ -9,39 +9,39 @@ import bonusColoring from "@/assets/bonus-coloring.png";
 
 const bonuses = [
   {
-    title: "Coleção Especial Heróis e Princesas",
-    description: "Mais de 50 moldes exclusivos dos personagens favoritos das crianças para montar e colecionar.",
-    from: "R$ 47,00",
+    title: "Héroes y princesas",
+    description: "Más de 50 moldes exclusivos de los personajes favoritos de los niños para armar y coleccionar.",
+    from: "$15.00",
     image: bonusHeroes,
   },
   {
-    title: "Casinhas e Cenários Gigantes",
-    description: "Castelos, cidades e cenários medievais em papel para criar mundos inteiros de brincadeira.",
-    from: "R$ 37,00",
+    title: "Castillos y escenarios gigantes",
+    description: "Castillos, ciudades y escenarios medievales en papel para crear mundos enteros de juego.",
+    from: "$12.00",
     image: bonusHouses,
   },
   {
-    title: "Alfabeto e Números 3D Educativos",
-    description: "Letras e números em formato 3D para as crianças aprenderem brincando enquanto montam suas próprias criações educativas.",
-    from: "R$ 27,00",
+    title: "Letras y números 3D",
+    description: "Letras y números en formato 3D para que los niños aprendan jugando mientras arman sus propias creaciones educativas.",
+    from: "$9.00",
     image: bonusAlphabet,
   },
   {
-    title: "Desafios que Prendem a Atenção (Sem Tela)",
-    description: "100 quebra-cabeças prontos para imprimir que estimulam raciocínio, foco e paciência enquanto a criança se diverte montando. Perfeito para substituir o tempo de tela por um desafio envolvente.",
-    from: "R$ 37,00",
+    title: "100 juegos de lógica",
+    description: "100 rompecabezas listos para imprimir que estimulan razonamiento, enfoque y paciencia mientras el niño se divierte armando.",
+    from: "$12.00",
     image: bonusPuzzles,
   },
   {
-    title: "Treine a Memória Brincando",
-    description: "Jogos simples e viciantes que desenvolvem memória, concentração e agilidade mental. Ideal para momentos em família longe do celular.",
-    from: "R$ 27,00",
+    title: "Juegos de memoria",
+    description: "Juegos simples y adictivos que desarrollan memoria, concentración y agilidad mental. Ideal para momentos en familia lejos del celular.",
+    from: "$9.00",
     image: bonusMemory,
   },
   {
-    title: "Criatividade Sem Limites (Imprima e Use Agora)",
-    description: "Mais de 100 atividades para colorir, recortar e criar. Estimulando coordenação motora, imaginação e criatividade de forma leve e divertida.",
-    from: "R$ 27,00",
+    title: "Actividades para colorear y crear",
+    description: "Más de 100 actividades para colorear, recortar y crear. Estimulando coordinación motora, imaginación y creatividad de forma ligera y divertida.",
+    from: "$9.00",
     image: bonusColoring,
   },
 ];
@@ -67,10 +67,10 @@ const BonusSection = () => (
         <div className="text-center mb-14">
           <Gift className="w-10 h-10 mx-auto mb-3 text-primary-foreground" />
           <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground">
-            Leve Hoje e Ganhe
+            Llévalo hoy y recibe
           </h2>
           <span className="inline-block bg-accent text-accent-foreground text-2xl md:text-3xl font-bold px-5 py-1.5 rounded-md mt-2">
-            6 Bônus Exclusivos!
+            6 Bonos Exclusivos GRATIS
           </span>
         </div>
       </FadeInUp>
@@ -90,14 +90,14 @@ const BonusSection = () => (
                   loading="lazy"
                 />
                 <span className="absolute top-4 right-4 bg-secondary text-secondary-foreground text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
-                  GRÁTIS
+                  GRATIS
                 </span>
               </div>
 
               {/* Content */}
               <div className="p-6">
                 <h3 className="text-base font-bold text-foreground mb-2 leading-tight">
-                  BÔNUS {i + 1}: {b.title}
+                  BONO {i + 1}: {b.title}
                 </h3>
                 <p className="text-sm text-muted-foreground mb-5 leading-relaxed">
                   {b.description}
@@ -109,7 +109,7 @@ const BonusSection = () => (
                     De {b.from}
                   </span>
                   <span className="text-secondary font-bold text-base">
-                    POR: R$00,00
+                    POR: $0.00
                   </span>
                 </div>
               </div>
