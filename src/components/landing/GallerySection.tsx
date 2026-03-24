@@ -9,10 +9,10 @@ import galleryMasks from "@/assets/gallery-masks-new.jpg";
 import galleryDiverse from "@/assets/gallery-diverse-new.jpg";
 
 const categories = [
-  { src: galleryHeroes, label: "Heróis" },
-  { src: galleryAnimals, label: "Animais" },
-  { src: galleryCharacters, label: "Personagens" },
-  { src: galleryVehicles, label: "Veículos" },
+  { src: galleryHeroes, label: "Héroes" },
+  { src: galleryAnimals, label: "Animales" },
+  { src: galleryCharacters, label: "Personajes" },
+  { src: galleryVehicles, label: "Vehículos" },
   { src: galleryMasks, label: "Máscaras" },
   { src: galleryDiverse, label: "Diversos" },
 ];
