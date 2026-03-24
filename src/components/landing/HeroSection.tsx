@@ -70,7 +70,7 @@ const HeroSection = () => {
                   ))}
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  <strong className="text-foreground">+5.000 famílias</strong> já aproveitam
+                  <strong className="text-foreground">+5.000 familias</strong> ya lo están disfrutando
                 </p>
               </div>
             </div>
