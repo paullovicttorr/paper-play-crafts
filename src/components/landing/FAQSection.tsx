@@ -19,9 +19,9 @@ const FAQSection = () => (
     <div className="container mx-auto px-4">
       <FadeInUp>
         <div className="text-center mb-14">
-          <span className="text-primary font-bold text-sm uppercase tracking-wider">Dúvidas</span>
+          <span className="text-primary font-bold text-sm uppercase tracking-wider">Dudas</span>
           <h2 className="text-3xl md:text-4xl font-bold mt-2 text-foreground">
-            Perguntas <span className="text-gradient-orange">Frequentes</span>
+            Preguntas <span className="text-gradient-orange">Frecuentes</span>
           </h2>
         </div>
       </FadeInUp>

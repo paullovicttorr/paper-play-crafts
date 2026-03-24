@@ -179,7 +179,7 @@ const GallerySection = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
               <span className="absolute top-4 left-4 bg-white/20 backdrop-blur-md border border-white/30 text-white text-[10px] uppercase tracking-widest font-semibold px-3 py-1 rounded-full">
-                Categoria
+                Categoría
               </span>
               <span className="absolute bottom-5 left-5 text-white text-xl font-bold drop-shadow-lg">
                 {cat.label}

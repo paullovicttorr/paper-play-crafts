@@ -9,7 +9,7 @@ const PricingSection = () => (
         <div className="text-center mb-14">
           <span className="text-primary font-bold text-sm uppercase tracking-wider">Oferta Especial</span>
           <h2 className="text-3xl md:text-4xl font-bold mt-2 text-foreground">
-            Escolha o seu <span className="text-gradient-orange">Pacote</span>
+            Elige tu <span className="text-gradient-orange">Paquete</span>
           </h2>
         </div>
       </FadeInUp>
@@ -20,7 +20,7 @@ const PricingSection = () => (
           <div className="relative">
             <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-10">
               <span className="bg-accent text-accent-foreground text-xs font-bold uppercase px-4 py-1.5 rounded-full flex items-center gap-1 shadow-md whitespace-nowrap">
-                <Star className="w-3 h-3 fill-current" /> Mais Vendido <Star className="w-3 h-3 fill-current" />
+                <Star className="w-3 h-3 fill-current" /> Más Vendido <Star className="w-3 h-3 fill-current" />
               </span>
             </div>
 
@@ -30,35 +30,35 @@ const PricingSection = () => (
               className="bg-gradient-to-b from-primary/5 to-card rounded-3xl border-2 border-primary shadow-card-hover overflow-hidden"
             >
               <div className="bg-primary text-primary-foreground p-6 text-center">
-                <p className="text-sm font-bold uppercase tracking-wider opacity-90">Acesso Completo</p>
-                <h3 className="text-xl font-bold mt-1">Mundo 3D em Papel PRO</h3>
+                <p className="text-sm font-bold uppercase tracking-wider opacity-90">Acceso Completo</p>
+                <h3 className="text-xl font-bold mt-1">Mundo 3D en Papel PRO</h3>
               </div>
 
               <div className="p-8 text-center space-y-6">
                 <div>
                   <div className="flex items-center justify-center gap-2">
-                    <p className="text-muted-foreground line-through text-lg">R$ 97,00</p>
-                    <span className="bg-secondary/15 text-secondary text-xs font-bold px-2 py-0.5 rounded">ECONOMIZE 72%</span>
+                    <p className="text-muted-foreground line-through text-lg">ANTES: $29</p>
+                    <span className="bg-secondary/15 text-secondary text-xs font-bold px-2 py-0.5 rounded">AHORRA 66%</span>
                   </div>
                   <p className="text-5xl font-bold text-foreground mt-1">
-                    R$ <span className="text-gradient-orange">27</span>
-                    <span className="text-lg text-muted-foreground font-normal">,90</span>
+                    $ <span className="text-gradient-orange">9</span>
+                    <span className="text-lg text-muted-foreground font-normal">.90 USD</span>
                   </p>
-                  <p className="text-sm text-muted-foreground mt-1">Pagamento único</p>
+                  <p className="text-sm text-muted-foreground mt-1">Pago único</p>
                 </div>
 
                 <ul className="text-left space-y-3 text-sm">
                   {[
-                    { icon: "📦", text: "Coleção TOTAL (+1.200 Moldes Premium)" },
-                    { icon: "🐾", text: "Animais" },
-                    { icon: "🦸", text: "Heróis" },
-                    { icon: "👸", text: "Princesas e Personagens" },
-                    { icon: "🏠", text: "Casinhas e Cenários" },
-                    { icon: "🚗", text: "Veículos" },
-                    { icon: "🔤", text: "Alfabeto e Números 3D" },
-                    { icon: "🧩", text: "100 Jogos Quebra Cabeça" },
-                    { icon: "🧠", text: "100 Jogos da Memória" },
-                    { icon: "🎨", text: "100 Atividades para Colorir e Recortar" },
+                    { icon: "📦", text: "+1.200 moldes premium" },
+                    { icon: "🐾", text: "Todas las categorías" },
+                    { icon: "🦸", text: "Héroes" },
+                    { icon: "👸", text: "Princesas y personajes" },
+                    { icon: "🏠", text: "Casas y escenarios" },
+                    { icon: "🚗", text: "Vehículos" },
+                    { icon: "🔤", text: "Letras y números 3D" },
+                    { icon: "🧩", text: "100 juegos de lógica" },
+                    { icon: "🧠", text: "100 juegos de memoria" },
+                    { icon: "🎨", text: "100 actividades creativas" },
                   ].map((item, i) => (
                     <li key={i} className="flex items-center gap-2 text-foreground">
                       <Check className="w-4 h-4 text-secondary flex-shrink-0" />
@@ -68,7 +68,7 @@ const PricingSection = () => (
                 </ul>
 
                 <p className="text-secondary font-bold text-sm flex items-center justify-center gap-1">
-                  🎉 Acesso VITALÍCIO (Nunca expira!)
+                  🎉 Acceso VITALICIO (¡Nunca expira!)
                 </p>
 
                 <div className="border-2 border-dashed border-accent rounded-xl p-4 flex items-center gap-3 text-left bg-accent/5">
@@ -76,10 +76,10 @@ const PricingSection = () => (
                     <Gift className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <p className="font-bold text-sm text-foreground">LEVE 6 BÔNUS EXTRAS!</p>
+                    <p className="font-bold text-sm text-foreground">¡LLÉVATE 6 BONOS EXTRAS!</p>
                     <p className="text-xs text-muted-foreground">
-                      <span className="line-through text-destructive">Valor: R$ 202,00</span>{" "}
-                       <span className="bg-secondary/15 text-secondary font-bold px-1.5 py-0.5 rounded text-xs">HOJE: R$ 0</span>
+                      <span className="line-through text-destructive">Valor: $66.00</span>{" "}
+                       <span className="bg-secondary/15 text-secondary font-bold px-1.5 py-0.5 rounded text-xs">HOY: $0</span>
                     </p>
                   </div>
                 </div>
@@ -92,17 +92,17 @@ const PricingSection = () => (
                 >
                   <span className="flex flex-col items-center">
                     <span className="flex items-center gap-2">
-                      EU QUERO TUDO!
+                      SÍ, QUIERO TODO EL ACCESO
                       <ArrowRight className="w-5 h-5" />
                     </span>
-                    <span className="text-xs font-normal opacity-80">Compra segura e acesso imediato</span>
+                    <span className="text-xs font-normal opacity-80">Compra segura y acceso inmediato</span>
                   </span>
                 </motion.a>
 
                 <div className="flex items-center justify-center gap-6 text-xs text-muted-foreground pt-2">
-                  <span className="flex items-center gap-1"><Lock className="w-3 h-3" /> Pagamento Seguro</span>
-                  <span className="flex items-center gap-1"><Mail className="w-3 h-3" /> Acesso Imediato</span>
-                  <span className="flex items-center gap-1"><Shield className="w-3 h-3" /> Garantia 30 dias</span>
+                  <span className="flex items-center gap-1"><Lock className="w-3 h-3" /> Pago Seguro</span>
+                  <span className="flex items-center gap-1"><Mail className="w-3 h-3" /> Acceso Inmediato</span>
+                  <span className="flex items-center gap-1"><Shield className="w-3 h-3" /> Garantía 30 días</span>
                 </div>
               </div>
             </motion.div>
@@ -119,32 +119,28 @@ const PricingSection = () => (
             <div className="text-center space-y-3">
               <h3 className="text-lg font-bold uppercase tracking-wider text-muted-foreground">Básico</h3>
               <p className="text-4xl font-bold text-foreground">
-                R$ <span>9</span>
-                <span className="text-lg text-muted-foreground font-normal">,90</span>
+                $ <span>3</span>
+                <span className="text-lg text-muted-foreground font-normal">.90 USD</span>
               </p>
-              <p className="text-sm text-muted-foreground">Pagamento único</p>
+              <p className="text-sm text-muted-foreground">Pago único</p>
             </div>
 
             <ul className="space-y-3 text-sm">
               <li className="flex items-center gap-2 text-foreground">
                 <Check className="w-4 h-4 text-secondary flex-shrink-0" />
-                +300 brinquedos para imprimir
+                +300 moldes para imprimir
               </li>
               <li className="flex items-center gap-2 text-foreground">
                 <Check className="w-4 h-4 text-secondary flex-shrink-0" />
-                Acesso imediato
-              </li>
-              <li className="flex items-center gap-2 text-foreground">
-                <Check className="w-4 h-4 text-secondary flex-shrink-0" />
-                Garantia de 7 dias
+                Acceso inmediato
               </li>
               <li className="flex items-center gap-2 text-muted-foreground">
                 <X className="w-4 h-4 text-destructive/60 flex-shrink-0" />
-                SEM Pacotes de Bônus
+                Sin bonos
               </li>
               <li className="flex items-center gap-2 text-muted-foreground">
                 <X className="w-4 h-4 text-destructive/60 flex-shrink-0" />
-                SEM Atualizações Futuras
+                Sin actualizaciones
               </li>
             </ul>
 
@@ -154,7 +150,7 @@ const PricingSection = () => (
               whileTap={{ scale: 0.97 }}
               className="block w-full bg-primary text-primary-foreground font-bold text-base py-3.5 rounded-2xl text-center cursor-pointer"
             >
-              Escolher Básico
+              QUIERO LA VERSIÓN BÁSICA
             </motion.a>
           </motion.div>
         </FadeInUp>

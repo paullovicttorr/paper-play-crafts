@@ -15,7 +15,7 @@ const AnnouncementBar = () => {
   return (
     <div className="sticky top-0 z-50 bg-destructive text-destructive-foreground py-2.5 px-4">
       <div className="container mx-auto flex items-center justify-center gap-4 text-sm md:text-base font-bold">
-        <span>🔥 OFERTA COM 80% DE DESCONTO, SOMENTE HOJE!</span>
+        <span><span>🔥 OFERTA CON 80% DE DESCUENTO — SOLO HOY</span></span>
         <span className="bg-black/20 px-3 py-1 rounded-full font-mono tracking-wider">
           {mins}:{secs}
         </span>

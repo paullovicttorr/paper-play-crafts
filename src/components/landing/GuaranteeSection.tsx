@@ -6,7 +6,7 @@ const GuaranteeSection = () => (
     <div className="container mx-auto px-4">
       <FadeInUp>
         <div className="max-w-3xl mx-auto flex flex-col md:flex-row items-center gap-8 bg-card rounded-3xl p-8 md:p-12 border border-border shadow-card">
-          <img src={guaranteeImg} alt="Selo de garantia" className="w-32 h-32 object-contain flex-shrink-0" />
+          <img src={guaranteeImg} alt="Sello de garantía" className="w-32 h-32 object-contain flex-shrink-0" />
           <div>
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
               Garantía total: <span className="text-secondary">30 días</span>

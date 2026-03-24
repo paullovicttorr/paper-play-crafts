@@ -13,9 +13,9 @@ const BenefitsSection = () => (
     <div className="container mx-auto px-4">
       <FadeInUp>
         <div className="text-center mb-14">
-          <span className="text-primary font-bold text-sm uppercase tracking-wider">Benefícios</span>
+          <span className="text-primary font-bold text-sm uppercase tracking-wider">Beneficios</span>
           <h2 className="text-3xl md:text-4xl font-bold mt-2 text-foreground">
-            Por que o <span className="text-gradient-orange">Mundo 3D em Papel</span> é diferente?
+            ¿Por qué <span className="text-gradient-orange">Mundo 3D en Papel</span> es diferente?
           </h2>
         </div>
       </FadeInUp>

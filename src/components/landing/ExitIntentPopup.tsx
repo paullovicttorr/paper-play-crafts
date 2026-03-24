@@ -62,7 +62,7 @@ const ExitIntentPopup = () => {
             <button
               onClick={close}
               className="absolute top-4 right-4 text-muted-foreground hover:bg-muted rounded-full p-1 cursor-pointer transition-colors"
-              aria-label="Fechar"
+              aria-label="Cerrar"
             >
               <X className="h-5 w-5" />
             </button>

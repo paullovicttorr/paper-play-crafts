@@ -88,7 +88,7 @@ const HeroSection = () => {
                   <img
                     key={i}
                     src={src}
-                    alt={`Prova social ${i + 1}`}
+                    alt={`Prueba social ${i + 1}`}
                     loading={i === 0 ? "eager" : "lazy"}
                     className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-in-out"
                     style={{ opacity: current === i ? 1 : 0 }}

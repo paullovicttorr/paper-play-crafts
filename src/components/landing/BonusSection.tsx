@@ -109,7 +109,7 @@ const BonusSection = () => (
                     De {b.from}
                   </span>
                   <span className="text-secondary font-bold text-base">
-                    POR: R$00,00
+                    POR: $0.00
                   </span>
                 </div>
               </div>

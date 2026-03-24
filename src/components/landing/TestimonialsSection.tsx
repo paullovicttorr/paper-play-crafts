@@ -88,7 +88,7 @@ const TestimonialsSection = () => (
                   <div className="rounded-xl overflow-hidden mb-4">
                     <img
                       src={t.image}
-                      alt={`Produto feito por ${t.name}`}
+                      alt={`Producto hecho por ${t.name}`}
                       className="w-full aspect-square object-cover"
                       loading="lazy"
                     />
