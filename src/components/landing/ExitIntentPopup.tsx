@@ -69,32 +69,32 @@ const ExitIntentPopup = () => {
 
             {/* Title */}
             <h2 className="text-2xl md:text-3xl font-extrabold text-center text-foreground">
-              🎁 Espere! Antes de sair...
+              🎁 ¡ESPERA! ANTES DE SALIR…
             </h2>
 
             {/* Persuasion copy */}
             <p className="font-semibold text-foreground/80 text-center mt-2">
-              Liberamos um desconto exclusivo para você agora.
+              Hemos liberado un descuento exclusivo solo para ti.
             </p>
             <p className="text-muted-foreground text-center mt-2 mb-6">
-              Leve o Pacote Completo com +1.200 moldes 3D para imprimir e montar com as crianças.
+              Llévate el acceso completo con +1.200 moldes 3D para imprimir y crear con tu hijo.
             </p>
 
             {/* Price block */}
             <div className="bg-muted/40 rounded-xl p-4 flex flex-col items-center justify-center mb-4 border border-border">
               <span className="text-sm text-muted-foreground">
                 De{" "}
-                <span className="line-through text-destructive font-medium">R$ 27,90</span>
-                {" "}por apenas:
+                <span className="line-through text-destructive font-medium">$9.90</span>
+                {" "}hoy por solo:
               </span>
               <span className="text-5xl font-black text-secondary my-1">
-                R$ 15,90
+                $5.90 USD
               </span>
             </div>
 
             {/* Urgency */}
             <p className="text-sm text-center text-primary font-medium mb-4">
-              ⏳ Essa oferta desaparece se você sair da página.
+              ⏳ Esta oferta desaparecerá cuando salgas de la página.
             </p>
 
             {/* CTA */}
@@ -102,13 +102,12 @@ const ExitIntentPopup = () => {
               href="https://pay.lowify.com.br/go.php?offer=4hv2a3k"
               className="w-full py-4 flex items-center justify-center text-center bg-secondary hover:bg-secondary/90 text-secondary-foreground font-bold text-lg rounded-lg shadow-lg transition-transform hover:scale-[1.03] pulse-glow-green"
             >
-              <span className="hidden md:inline">SIM! Quero acesso completo por R$ 15,90</span>
-              <span className="md:hidden">SIM! Quero Tudo com Desconto</span>
+              SÍ, QUIERO TODO POR $5.90
             </a>
 
             {/* Footer */}
             <p className="text-xs text-muted-foreground text-center mt-3">
-              Acesso imediato • Pagamento único
+              Acceso inmediato • Pago único
             </p>
           </motion.div>
         </motion.div>
