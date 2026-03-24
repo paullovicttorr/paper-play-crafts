@@ -53,7 +53,8 @@ const HeroSection = () => {
                 Crea momentos inolvidables mientras tu hijo aprende jugando — lejos del celular.
               </p>
               <motion.a
-                href="https://pay.hotmart.com/G105060095P?off=jxwr6qjj&checkoutMode=10&bid=1774385240192"
+                href="#oferta"
+                onClick={(e) => { e.preventDefault(); document.getElementById('oferta')?.scrollIntoView({ behavior: 'smooth' }); }}
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.97 }}
                 className="inline-flex items-center gap-3 bg-primary text-primary-foreground font-bold text-lg px-8 py-4 rounded-2xl pulse-glow cursor-pointer"
