@@ -102,7 +102,7 @@ const HeroSection = () => {
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                 className="absolute -bottom-4 -right-2 md:-right-4 z-20 bg-secondary text-secondary-foreground font-bold px-5 py-3 rounded-2xl shadow-lg text-sm"
               >
-                ⭐ Acesso Imediato
+                ⭐ Acceso Inmediato
               </motion.div>
             </div>
           </FadeInUp>
