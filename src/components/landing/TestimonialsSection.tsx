@@ -56,9 +56,9 @@ const TestimonialsSection = () => (
       <FadeInUp>
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-            Quem monta,{" "}
+            Quien lo arma,{" "}
             <span className="inline-block bg-accent text-accent-foreground px-3 py-1 rounded-md">
-              se apaixona!
+              ¡se enamora!
             </span>
           </h2>
         </div>
