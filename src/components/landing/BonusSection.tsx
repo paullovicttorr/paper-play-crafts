@@ -97,7 +97,7 @@ const BonusSection = () => (
               {/* Content */}
               <div className="p-6">
                 <h3 className="text-base font-bold text-foreground mb-2 leading-tight">
-                  BÔNUS {i + 1}: {b.title}
+                  BONO {i + 1}: {b.title}
                 </h3>
                 <p className="text-sm text-muted-foreground mb-5 leading-relaxed">
                   {b.description}
