@@ -145,7 +145,7 @@ const PricingSection = () => (
             </ul>
 
             <motion.a
-              href="https://pay.lowify.com.br/go.php?offer=zsgce2p"
+              href="https://pay.hotmart.com/G105060095P?off=14rvvtck&checkoutMode=10&bid=1774385186302"
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.97 }}
               className="block w-full bg-primary text-primary-foreground font-bold text-base py-3.5 rounded-2xl text-center cursor-pointer"
