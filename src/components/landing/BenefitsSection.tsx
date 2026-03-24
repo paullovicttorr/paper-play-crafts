@@ -2,10 +2,10 @@ import { FadeInUp, TiltCard } from "./Animations";
 import { MonitorOff, Brain, Users, Coins } from "lucide-react";
 
 const benefits = [
-  { icon: MonitorOff, title: "Longe das Telas", desc: "Troque o vício do celular por criatividade real e palpável." },
-  { icon: Brain, title: "Coordenação Motora", desc: "Estimula o cérebro e a precisão das crianças de forma lúdica." },
-  { icon: Users, title: "Tempo em Família", desc: "A desculpa perfeita para sentar e rir junto com eles." },
-  { icon: Coins, title: "Custo Quase Zero", desc: "Pague apenas a impressão e tenha brinquedos infinitos." },
+  { icon: MonitorOff, title: "Menos tiempo en pantallas", desc: "Cambia el celular por creatividad real y tangible." },
+  { icon: Brain, title: "Estimula la creatividad", desc: "Desarrolla la imaginación y el pensamiento creativo de forma lúdica." },
+  { icon: Users, title: "Momentos reales en familia", desc: "La excusa perfecta para sentarse y reír juntos." },
+  { icon: Coins, title: "Costo casi cero", desc: "Solo paga la impresión y tendrás juguetes infinitos." },
 ];
 
 const BenefitsSection = () => (
