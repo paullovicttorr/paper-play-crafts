@@ -90,7 +90,7 @@ const BonusSection = () => (
                   loading="lazy"
                 />
                 <span className="absolute top-4 right-4 bg-secondary text-secondary-foreground text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
-                  GRÁTIS
+                  GRATIS
                 </span>
               </div>
 
