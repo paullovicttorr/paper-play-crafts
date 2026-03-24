@@ -67,10 +67,10 @@ const BonusSection = () => (
         <div className="text-center mb-14">
           <Gift className="w-10 h-10 mx-auto mb-3 text-primary-foreground" />
           <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground">
-            Leve Hoje e Ganhe
+            Llévalo hoy y recibe
           </h2>
           <span className="inline-block bg-accent text-accent-foreground text-2xl md:text-3xl font-bold px-5 py-1.5 rounded-md mt-2">
-            6 Bônus Exclusivos!
+            6 Bonos Exclusivos GRATIS
           </span>
         </div>
       </FadeInUp>
