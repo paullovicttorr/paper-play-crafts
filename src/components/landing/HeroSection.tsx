@@ -65,7 +65,7 @@ const HeroSection = () => {
                 <div className="flex -space-x-2">
                   {avatarFaces.map((src, i) => (
                     <div key={i} className="w-9 h-9 rounded-full border-2 border-card overflow-hidden">
-                      <img src={src} alt="Cliente" className="w-full h-full object-cover" />
+                      <img src={src} alt="Cliente satisfecho" className="w-full h-full object-cover" />
                     </div>
                   ))}
                 </div>
