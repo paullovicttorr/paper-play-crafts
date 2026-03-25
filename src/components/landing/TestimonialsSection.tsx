@@ -66,12 +66,12 @@ const TestimonialsSection = () => (
 
       <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
         {testimonials.map((t, i) => (
-          <FadeInUp key={i} delay={Math.min(i * 0.08, 0.24)}>
+          <FadeInUp key={i}>
             <div className="relative pt-8 group">
               {/* Avatar overlapping top */}
               <div className="absolute -top-0 left-8 z-10">
                 <div className="w-14 h-14 rounded-full bg-muted flex items-center justify-center font-bold text-primary text-lg border-4 border-card shadow-lg overflow-hidden">
-                  <img src={t.avatar} alt={t.name} className="w-full h-full object-cover" />
+                  <img src={t.avatar} alt={t.name} loading="lazy" className="w-full h-full object-cover" />
                 </div>
               </div>
 
