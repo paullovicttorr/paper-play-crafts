@@ -1,5 +1,4 @@
 import { useRef, useEffect, useCallback } from "react";
-import { motion } from "framer-motion";
 import { FadeInUp } from "./Animations";
 import galleryHeroes from "@/assets/gallery-heroes-new.webp";
 import galleryAnimals from "@/assets/gallery-animals-new-v2.jpg";
@@ -20,6 +19,7 @@ const categories = [
 const duplicated = [...categories, ...categories, ...categories];
 
 const GallerySection = () => {
+  const sectionRef = useRef<HTMLElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
   const animRef = useRef<number>(0);
   const posRef = useRef(0);
@@ -69,9 +69,38 @@ const GallerySection = () => {
     // Start from middle set
     posRef.current = -getSetWidth();
     applyTransform();
-    animRef.current = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(animRef.current);
-  }, [animate, getSetWidth, applyTransform]);
+  }, [getSetWidth, applyTransform]);
+
+  useEffect(() => {
+    const sectionEl = sectionRef.current;
+    if (!sectionEl) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !animRef.current) {
+          lastTime.current = 0;
+          animRef.current = requestAnimationFrame(animate);
+        }
+
+        if (!entry.isIntersecting && animRef.current) {
+          cancelAnimationFrame(animRef.current);
+          animRef.current = 0;
+          lastTime.current = 0;
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(sectionEl);
+
+    return () => {
+      observer.disconnect();
+      if (animRef.current) {
+        cancelAnimationFrame(animRef.current);
+        animRef.current = 0;
+      }
+    };
+  }, [animate]);
 
   // Mouse drag
   const onMouseDown = useCallback((e: React.MouseEvent) => {
@@ -127,7 +156,7 @@ const GallerySection = () => {
   }, [onMouseMove, onMouseUp]);
 
   return (
-    <section className="py-20 bg-background overflow-hidden">
+    <section ref={sectionRef} className="py-20 bg-background overflow-hidden">
       <div className="container mx-auto px-4 mb-14">
         <FadeInUp>
           <div className="text-center">
@@ -164,11 +193,9 @@ const GallerySection = () => {
           style={{ transform: "translateX(0px)" }}
         >
           {duplicated.map((cat, i) => (
-            <motion.div
+            <div
               key={i}
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              className="relative w-56 md:w-64 aspect-[3/4] rounded-3xl overflow-hidden shrink-0 shadow-card select-none"
+              className="relative w-56 md:w-64 aspect-[3/4] rounded-3xl overflow-hidden shrink-0 shadow-card select-none transition-transform duration-300 hover:scale-105"
             >
               <img
                 src={cat.src}
@@ -178,13 +205,13 @@ const GallerySection = () => {
                 draggable={false}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-              <span className="absolute top-4 left-4 bg-white/20 backdrop-blur-md border border-white/30 text-white text-[10px] uppercase tracking-widest font-semibold px-3 py-1 rounded-full">
+              <span className="absolute top-4 left-4 bg-white/20 border border-white/30 text-white text-[10px] uppercase tracking-widest font-semibold px-3 py-1 rounded-full">
                 Categoría
               </span>
               <span className="absolute bottom-5 left-5 text-white text-xl font-bold drop-shadow-lg">
                 {cat.label}
               </span>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

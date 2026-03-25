@@ -25,7 +25,7 @@ const FAQSection = () => (
           </h2>
         </div>
       </FadeInUp>
-      <FadeInUp delay={0.15}>
+      <FadeInUp>
         <div className="max-w-2xl mx-auto">
           <Accordion type="single" collapsible className="space-y-3">
             {faqs.map((faq, i) => (
