@@ -77,7 +77,7 @@ const BonusSection = () => (
 
       <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
         {bonuses.map((b, i) => (
-          <FadeInUp key={i} delay={Math.min(i * 0.08, 0.3)}>
+          <FadeInUp key={i}>
             <div
               className="bg-card rounded-2xl overflow-hidden border-b-4 border-secondary shadow-card hover:shadow-card-hover hover:-translate-y-2 transition-all duration-300"
             >
